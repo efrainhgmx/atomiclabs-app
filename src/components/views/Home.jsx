@@ -1,7 +1,9 @@
-
+import { Hero } from "../molecules";
 const Home = () => {
   return (
-    <div>Hola desde el Home</div>
+    <main>
+        <Hero/>
+    </main>
   )
 }
 
