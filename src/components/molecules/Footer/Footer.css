@@ -1,0 +1,38 @@
+.Footer {
+    width: 100%;
+    background-color: black;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Footer a,
+.Footer p {
+    font-size: 1.4rem;
+    color: var(--white);
+}
+
+.Footer .social-container {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-container img {
+    width: 18px;
+    height: 18px;
+    margin-inline: 10px;
+}
+
+@media (min-width: 1024px) {
+    .Footer a,
+    .Footer p {
+        font-size: 1.8rem;
+    }
+    .social-container img {
+        width: 25px;
+        height: 25px;
+        margin-inline: 20px;
+    }
+}

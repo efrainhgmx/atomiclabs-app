@@ -1,12 +1,22 @@
-import { CardsSection, Hero, TeamWork, WhyUs } from "../molecules";
+import { 
+  CardsSection, 
+  Footer, 
+  Hero, 
+  TeamWork, 
+  WhyUs 
+} from "../molecules";
+
 const Home = () => {
   return (
+    <>
     <main>
-        <Hero/>
-        <CardsSection />
-        <TeamWork />
-        <WhyUs/>
+      <Hero/>
+      <CardsSection />
+      <TeamWork />
+      <WhyUs/>
     </main>
+    <Footer />
+    </>
   )
 }
 
