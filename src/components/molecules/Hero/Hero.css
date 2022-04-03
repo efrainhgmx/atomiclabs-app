@@ -1,0 +1,79 @@
+.Hero {
+    background-image: url(../../../assets/images/mask-mobile.png); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    bottom: 10px;
+}
+
+.Hero .hero-content__container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1440px;
+}
+
+.hero-content__container, img.hero-image {
+    width: 90%;
+}
+
+.hero-content__text {
+    max-width: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content__text p{
+    font-size: 3.4rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.more-info__container {
+    width: 100%;
+    margin-block: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.more-info__container .arrow-button {
+    background-image: url(../../../assets/images/button.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+.arrow-button:hover {
+    cursor: pointer;
+}
+
+@media (min-width: 1024px) {
+    .Hero .hero-content__container {
+        flex-direction: row;
+        min-height: 80vh;
+    }
+
+    .hero-content__container, img.hero-image {
+        width: 550px;
+        height: 480px;
+    }
+
+    .arrow-button {
+        width: 50px;
+        height: 50px;
+    }
+}

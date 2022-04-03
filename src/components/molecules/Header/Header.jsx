@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className='Header'>
         <Link to="/" rel="noopener noreferrer" aria-label='Ir al inicio'>
-            <img src={atomicLogo} alt='Atomic Labs' width={162} height={81} loading="lazy"/>
+            <img className='header-image' src={atomicLogo} alt='Atomic Labs' width={162} height={81} loading="lazy"/>
         </Link>
     </header>
   )

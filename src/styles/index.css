@@ -2,7 +2,37 @@
     font-family: 'Roboto', Arial, sans-serif;
 }
 
+:root {
+    --blue: #1c6ca7;
+    --white: #ffff;
+    --orange: #ff4c00;
+}
+
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-primary {
+    color: var(--blue);
+    background-color: var(--white);
+    padding: 6px 15px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+
+}
+
+p {
+    color: var(--white);
+}
+
+span.orange {
+    color: var(--orange);
 }
