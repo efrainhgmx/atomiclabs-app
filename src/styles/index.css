@@ -28,8 +28,8 @@ body {
     border-radius: 50px;
     text-decoration: none;
     font-size: 1.5rem;
-    font-weight: 700;
-
+    font-weight: 900;
+    margin-block: 20px;
 }
 
 p {
@@ -38,4 +38,10 @@ p {
 
 span.orange {
     color: var(--orange);
+}
+
+@media (min-width: 1024px) {
+    .btn-primary {
+        font-size: 1.8rem;
+    }
 }
