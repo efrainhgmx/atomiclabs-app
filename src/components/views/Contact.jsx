@@ -1,4 +1,4 @@
-import { Header } from "../molecules"
+import { Footer, Header } from "../molecules"
 import { Form } from "../organisms"
 
 
@@ -7,6 +7,7 @@ const Contact = () => {
     <section className="Contact">
         <Header/>
         <Form/>
+        <Footer/>
     </section>
   )
 }

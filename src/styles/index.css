@@ -74,6 +74,10 @@ input {
     display: block;
     outline: var(--orange);
     font-size: 1.6rem;
+    width: 60%;
+    max-width: 320px;
+    margin-block: 20px;
+    padding: 5px;
 }
 
 label {
