@@ -1,12 +1,27 @@
+.Card {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .Card .single-card {
+    margin-block: 20px;
     background-color: var(--white);
-    max-width: 320px;
+    min-width: 320px;
     border-radius: 10px;
     min-height: 420px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: all .6s ease;
+}
+
+.Card .single-card:hover {
+    cursor: pointer;
 }
 
 .single-card h2 {
@@ -24,8 +39,27 @@
 
 .single-card.touch {
     background-color: var(--orange);
+    width: 380px;
+    max-width: 420px;
+    height: 500px;
+    position: relative;
+    z-index: 5;
+}
+
+.single-card.touch h2 {
+    color: var(--white);
+    border-top: 2px solid var(--white);
+    padding-top: 12px;
 }
 
 .single-card.touch ul {
     color: var(--white);
+}
+
+
+@media (min-width: 1024px) {
+    .Card {
+        flex-direction: row;
+        gap: 8px;
+    }
 }
