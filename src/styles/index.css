@@ -40,6 +40,15 @@ span.orange {
     color: var(--orange);
 }
 
+.Contact {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../assets/images/mask-pc.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 @media (min-width: 1024px) {
     .btn-primary {
         font-size: 1.8rem;
