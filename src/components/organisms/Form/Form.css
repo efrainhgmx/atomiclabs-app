@@ -2,3 +2,39 @@
     width: 60%;
     margin-left: 15px;
 }
+
+.counter-section {
+    width: 100%;
+    display: flex;
+    border: 1px solid white;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.counter-section .number {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border: 2px solid rgba(221, 221, 221, 0.6);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.Form span.number p {
+    color: rgba(221, 221, 221, 0.6);
+}
+
+span.number.active {
+    border: none;
+    background-color: var(--orange);
+}
+
+span.number.active p {
+    color: var(--white);
+}
+
+span.number.check {
+    border: none;
+    background-color: var(--orange);
+}

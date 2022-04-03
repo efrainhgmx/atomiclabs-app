@@ -49,6 +49,22 @@ span.orange {
     background-repeat: no-repeat;
 }
 
+
+.btn-form  {
+    background-color: var(--orange);
+    color: var(--white);
+    padding: 6px 25px;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-block: 20px;
+}
+
+.btn-form.disabled {
+    opacity: 0.6;
+}
 @media (min-width: 1024px) {
     .btn-primary {
         font-size: 1.8rem;
