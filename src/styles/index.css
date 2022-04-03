@@ -71,7 +71,6 @@ form p {
     font-size: 1.8rem;
 }
 input {
-    display: block;
     outline: var(--orange);
     font-size: 1.6rem;
     width: 60%;
@@ -81,6 +80,7 @@ input {
 }
 
 label {
+    display: block;
     color: var(--white);
     font-size: 1.8rem;
 }

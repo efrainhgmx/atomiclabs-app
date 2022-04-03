@@ -53,10 +53,10 @@ const Form = () => {
             <form>
                 <p>Queremos saber que eres, por favor ingresa los siguientes datos.</p>
                 <label>Nombres(s)</label>
-                <input type="text"/>
+                <input type="text"/> <span className='block'></span>
 
                 <label>Appellidos(s)</label>
-                <input type="text"/>
+                <input type="text"/> <span className='block'></span>
             </form>
 
             <figure>
