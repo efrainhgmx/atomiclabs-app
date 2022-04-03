@@ -45,7 +45,7 @@ span.orange {
     min-height: 100vh;
     background-image: url(../assets/images/mask-pc.png);
     background-position: center;
-    background-size: cover;
+    background-size: auto;
     background-repeat: no-repeat;
 }
 
@@ -60,10 +60,25 @@ span.orange {
     font-size: 1.5rem;
     font-weight: 900;
     margin-block: 20px;
+    min-width: 150px;
 }
 
 .btn-form.disabled {
     opacity: 0.6;
+}
+
+form p {
+    font-size: 1.8rem;
+}
+input {
+    display: block;
+    outline: var(--orange);
+    font-size: 1.6rem;
+}
+
+label {
+    color: var(--white);
+    font-size: 1.8rem;
 }
 @media (min-width: 1024px) {
     .btn-primary {

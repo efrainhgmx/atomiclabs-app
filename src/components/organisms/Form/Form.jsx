@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import classnames from "classnames";
 import { Progressbar } from '../../atoms';
 import checkIMG from "../../../assets/images/checkform.png";
+import meditationIMG from "../../../assets/images/meditando.png"
 import "./Form.css";
 
 
@@ -40,7 +41,29 @@ const Form = () => {
             </span>
         </div>
         <Progressbar bgcolor="#ff4c00" progress={progress}  height={12} />
-        <button aria-label='Enviar' className='btn-form disabled' onClick={() => setProgress(prevState => prevState + 25)}>ENVIAR</button>
+
+        <div className='title'>
+        <span className='number active'>
+            <p>1</p>
+        </span>
+        <h2> TE QUEREMOS <span className='orange'>CONOCER</span></h2>
+        </div>
+
+        <div className='form-section'>
+            <form>
+                <p>Queremos saber que eres, por favor ingresa los siguientes datos.</p>
+                <label>Nombres(s)</label>
+                <input type="text"/>
+
+                <label>Appellidos(s)</label>
+                <input type="text"/>
+            </form>
+
+            <figure>
+                <img src={meditationIMG} alt="Astronauta" loading='lazy'/>
+                <button aria-label='Enviar' className='btn-form disabled' onClick={() => setProgress(prevState => prevState + 25)}>ENVIAR</button>
+            </figure>
+        </div>
     </section>
   );
 }

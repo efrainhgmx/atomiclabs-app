@@ -26,7 +26,13 @@
 }
 
 span.number.active {
+    width: 25px;
+    height: 25px;
+    display: flex;
     border: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
     background-color: var(--orange);
 }
 
@@ -37,4 +43,34 @@ span.number.active p {
 span.number.check {
     border: none;
     background-color: var(--orange);
+}
+
+.title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
+}
+
+.title h2 {
+    font-size: 3.4rem;
+    color: var(--white);
+}
+
+.form-section {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: repeat(2, 2fr);
+    grid-auto-rows: auto;
+}
+
+figure img {
+    width: 90%;
+    max-width: 550px;
+}
+
+figure button.btn-form {
+    position: relative;
+    right: 60px;
 }
