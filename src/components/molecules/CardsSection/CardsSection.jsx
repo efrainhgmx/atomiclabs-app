@@ -4,9 +4,10 @@ import "./CardsSection.css";
 
 const CardsSection = () => {
   return (
-    <div>Hola
+    <section className='CardsSection'>
+        <p className='text'>SOMOS EL BRAZO DERECHO <span className='orange'>DE LA TECNOLOGÍA</span></p>
         <Card />
-    </div>
+    </section>
   )
 }
 

@@ -5,8 +5,6 @@
     background-repeat: no-repeat;
     width: 100%;
     min-height: 100vh;
-    position: relative;
-    bottom: 10px;
 }
 
 .Hero .hero-content__container {
