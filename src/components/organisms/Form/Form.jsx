@@ -9,10 +9,14 @@ import "./Form.css";
 
 const Form = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const onSubmit = data => console.log(data);
   const [progress, setProgress] = useState(25);
   const [counter, setCounter] = useState(0);
-
+  const [cellphoneNumber, setCellphoneNumber] = useState("");
+  
+  const onSubmit = data => {
+      if(data.cellphone) setCellphoneNumber(data.cellphone);
+      console.log(data);
+  };
   useEffect(() => {
     setCounter(prevState => prevState + 1);
     if(progress >= 100) {
@@ -77,37 +81,36 @@ const Form = () => {
 
                 {(counter === 2) && (
                     <>
-                        <p>Queremos saber que eres, por favor ingresa los siguientes datos.</p>
+                        <p>Necesitamos validar tu número para continuar.</p>
+                        <p>Ingresa tu número a 10 digitos y te enviaremos un SMS</p>
                     
                         <label>Número de Celular</label>
-                        <input type="number" {...register("cellphone", { required: true, minLength: 3 })}/> <span className='block'></span>
+                        <input type="number" {...register("cellphone", { required: true, minLength: 10 })}/> <span className='block'></span>
                         {errors.cellphone && <span className='red'>Por favor llena este campo</span>}
                     </>
                 )}
 
                 {(counter === 3) && (
                     <>
-                        <p>Queremos saber que eres, por favor ingresa los siguientes datos.</p>
-                        <label>Nombres(s)</label>
-                        <input type="text" {...register("firstName", { required: true, minLength: 5 })}/> <span className='block'></span>
-                        {errors.firstName && <span className='red'>El nombre requiere minimo 5 carácteres</span>}
+                        <p>Te enviamos un mensaje de SMS al numero</p>
+                        <p>{`+52 ${cellphoneNumber}`}</p>
+                    
+                        <label>Código de verificación</label>
+                        <input type="number" {...register("code", { required: true, minLength: 5 })}/> <span className='block'></span>
+                        {errors.code && <span className='red'>Por favor llena este campo</span>}
 
-                        <label>Apellidos(s)</label>
-                        <input type="text" {...register("lastName", { required: true })}/> <span className='block'></span>
-                        {errors.lastName && <span className='red'>Por favor llena este campo</span>}
+                        <p>¿No recibiste el código? <strong>Reenviar de nuevo</strong></p>
                     </>
                 )}
 
                 {(counter === 4) && (
                     <>
-                        <p>Queremos saber que eres, por favor ingresa los siguientes datos.</p>
-                        <label>Nombres(s)</label>
-                        <input type="text" {...register("firstName", { required: true, minLength: 5 })}/> <span className='block'></span>
-                        {errors.firstName && <span className='red'>El nombre requiere minimo 5 carácteres</span>}
-
-                        <label>Apellidos(s)</label>
-                        <input type="text" {...register("lastName", { required: true })}/> <span className='block'></span>
-                        {errors.lastName && <span className='red'>Por favor llena este campo</span>}
+                        <p>Porfavor revisa nuestros terminos y condiciones para este servicio</p>
+                        <a className='conditions-link' href='https://www.atomic32.com/_files/ugd/8143b9_d7437e31ef3849d3a12617f074bd9b01.pdf' rel='noopener noreferrer' target="_blank">Consulta terminos y condiciones</a>
+                        <label>
+                            <input type="checkbox" defaultChecked={true}/>
+                            Acepto terminos y condiciones</label>
+                        
                     </>
                 )}
                 <input type='submit' value="Enviar" aria-label='Enviar' className='btn-form' onClick={() => setProgress(prevState => prevState + 25)

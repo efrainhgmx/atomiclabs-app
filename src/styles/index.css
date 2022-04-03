@@ -72,13 +72,23 @@ span.orange {
 form p {
     font-size: 1.8rem;
 }
-input {
+
+input  {
+    margin-block: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
     outline: var(--orange);
     font-size: 1.6rem;
     width: 60%;
     max-width: 320px;
     margin-block: 20px;
     padding: 5px;
+}
+
+input[type="checkbox"] {
+    margin-inline-end: 15px;
 }
 
 label {
@@ -93,6 +103,12 @@ span.red {
     position: relative;
     bottom: 8px;
     font-size: 1.6rem;
+}
+
+.conditions-link {
+    display: block;
+    font-size: 1.4rem;
+    color: var(--white);
 }
 @media (min-width: 1024px) {
     .btn-primary {
