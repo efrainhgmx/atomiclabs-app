@@ -47,6 +47,10 @@
     font-size: 1.8rem;
 }
 
+.more-info__containe p {
+    margin: 0;
+}
+
 .more-info__container .arrow-button {
     background-image: url(../../../assets/images/button.png);
     background-repeat: no-repeat;
@@ -72,7 +76,7 @@
         height: 480px;
     }
 
-    .arrow-button {
+    .more-info__container .arrow-button {
         width: 50px;
         height: 50px;
     }
