@@ -4,6 +4,8 @@ import classnames from "classnames";
 import { Progressbar } from '../../atoms';
 import checkIMG from "../../../assets/images/checkform.png";
 import meditationIMG from "../../../assets/images/meditando.png"
+import heroAstronaut from "../../../assets/images/heroAstronaut-mobile.png";
+import rugbyIMG from "../../../assets/images/rugby.png";
 import "./Form.css";
 
 
@@ -12,6 +14,7 @@ const Form = () => {
   const [progress, setProgress] = useState(25);
   const [counter, setCounter] = useState(0);
   const [cellphoneNumber, setCellphoneNumber] = useState("");
+  const [image, setImage] = useState(meditationIMG);
   
   const onSubmit = data => {
       if(data.cellphone) setCellphoneNumber(data.cellphone);
@@ -23,7 +26,27 @@ const Form = () => {
         setProgress(100);
         setCounter(4)
     } 
-  }, [progress])
+  }, [progress]);
+
+  useEffect(() => {
+    switch (counter) {
+        case 1:
+            setImage(meditationIMG);
+            break;
+        case 2:
+            setImage(heroAstronaut);
+            break;
+        case 3:
+            setImage(heroAstronaut);
+            break;
+        case 4:
+            setImage(rugbyIMG);
+            break;
+    
+        default:
+            break;
+    }
+  }, [counter]);
 
   return (
     <section className='Form'>
@@ -118,7 +141,7 @@ const Form = () => {
             </form>
 
             <figure>
-                <img src={meditationIMG} alt="Astronauta" loading='lazy'/>
+                <img src={image} alt="Astronauta" loading='lazy'/>
             </figure>
         </div>
     </section>

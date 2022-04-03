@@ -52,6 +52,7 @@ span.orange {
 
 
 .btn-form  {
+    display: block;
     background-color: var(--orange);
     color: var(--white);
     padding: 6px 25px;
