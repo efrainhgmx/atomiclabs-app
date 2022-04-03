@@ -41,7 +41,8 @@ span.orange {
     color: var(--orange);
 }
 
-.Contact {
+.Contact,
+.Success {
     width: 100%;
     min-height: 100vh;
     background-image: url(../assets/images/mask-pc.png);
