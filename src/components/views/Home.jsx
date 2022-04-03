@@ -1,8 +1,9 @@
-import { Hero } from "../molecules";
+import { CardsSection, Hero } from "../molecules";
 const Home = () => {
   return (
     <main>
         <Hero/>
+        <CardsSection />
     </main>
   )
 }
