@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useForm } from "react-hook-form";
 import classnames from "classnames";
 import { Progressbar } from '../../atoms';
 import checkIMG from "../../../assets/images/checkform.png";
@@ -7,6 +8,8 @@ import "./Form.css";
 
 
 const Form = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm();
+  const onSubmit = data => console.log(data);
   const [progress, setProgress] = useState(25);
 
   useEffect(() => {
@@ -50,18 +53,20 @@ const Form = () => {
         </div>
 
         <div className='form-section'>
-            <form>
+            <form onSubmit={handleSubmit(onSubmit)}>
                 <p>Queremos saber que eres, por favor ingresa los siguientes datos.</p>
                 <label>Nombres(s)</label>
-                <input type="text"/> <span className='block'></span>
+                <input type="text" {...register("firstName", { required: true, minLength: 5 })}/> <span className='block'></span>
+                {errors.firstName && <span className='red'>El nombre requiere minimo 5 carácteres</span>}
 
-                <label>Appellidos(s)</label>
-                <input type="text"/> <span className='block'></span>
+                <label>Apellidos(s)</label>
+                <input type="text" {...register("lastName", { required: true })}/> <span className='block'></span>
+                {errors.lastName && <span className='red'>Por favor llena este campo</span>}
+                <input type='submit' value="Enviar" aria-label='Enviar' className='btn-form disabled' onClick={() => setProgress(prevState => prevState + 25)}/>
             </form>
 
             <figure>
                 <img src={meditationIMG} alt="Astronauta" loading='lazy'/>
-                <button aria-label='Enviar' className='btn-form disabled' onClick={() => setProgress(prevState => prevState + 25)}>ENVIAR</button>
             </figure>
         </div>
     </section>
