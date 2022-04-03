@@ -22,7 +22,7 @@ const Hero = () => {
         </div>
       </div>
       <div className='more-info__container'>
-          <div role="button" className='arrow-button' aria-label="Saber más"></div>
+          <div onClick={() => document.getElementById("more-info").scrollIntoView()} role="button" className='arrow-button' aria-label="Saber más"></div>
           <p>Quiero saber más</p>
       </div>
     </section>

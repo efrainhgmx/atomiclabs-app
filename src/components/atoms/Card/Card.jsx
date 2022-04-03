@@ -12,7 +12,7 @@ const Card = () => {
 
   return (
     <div className='Card'>
-        <article onMouseOver={() => setExploreClicked(true)} onMouseLeave={() => setExploreClicked(false)} className={classnames("single-card", {
+        <article id="more-info" onMouseOver={() => setExploreClicked(true)} onMouseLeave={() => setExploreClicked(false)} className={classnames("single-card", {
             touch: exploreClicked
         })}>
             <img src={exploraIMG} alt='Explora' loading='lazy' />
