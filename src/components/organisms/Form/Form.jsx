@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import classnames from "classnames";
-import { Progressbar } from '../../atoms';
+import { NumberValidation, Progressbar, CodeValidation } from '../../atoms';
 import checkIMG from "../../../assets/images/checkform.png";
 import meditationIMG from "../../../assets/images/meditando.png"
 import heroAstronaut from "../../../assets/images/heroAstronaut-mobile.png";
@@ -15,6 +15,7 @@ const Form = () => {
   const [counter, setCounter] = useState(0);
   const [cellphoneNumber, setCellphoneNumber] = useState("");
   const [image, setImage] = useState(meditationIMG);
+  const [showNumberValidation, setShowNumberValidation] = useState(false);
   
   const onSubmit = data => {
       if(data.cellphone) setCellphoneNumber(data.cellphone);
@@ -48,8 +49,20 @@ const Form = () => {
     }
   }, [counter]);
 
+
+  useEffect(() => {
+    if(showNumberValidation) {
+        setTimeout(() => {
+            setShowNumberValidation(false)
+        }, 2000);
+    };
+  }, [showNumberValidation])
+  
+
   return (
     <section className='Form'>
+        {showNumberValidation && <NumberValidation />}
+        <CodeValidation />
         <div className='counter-section'>
             <span className={classnames("number", {
                 active: progress === 25,
@@ -145,7 +158,7 @@ const Form = () => {
             </figure>
         </div>
     </section>
-  );
+  ); 
 }
 
 export default Form

@@ -1,0 +1,26 @@
+.NumberValidation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    font-size: 2.8rem;
+    letter-spacing: 5px;
+}
+
+.NumberValidation img {
+    width: 90%;
+    max-width: 80px;
+}
+
+@media (min-width: 1024px) {
+    .NumberValidation {
+        font-size: 3.8rem;
+    }
+
+    .NumberValidation img {
+        max-width: 140px;
+    }
+}
