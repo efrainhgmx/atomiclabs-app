@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import classnames from "classnames";
 import { NumberValidation, Progressbar, CodeValidation } from '../../atoms';
@@ -16,9 +17,13 @@ const Form = () => {
   const [cellphoneNumber, setCellphoneNumber] = useState("");
   const [image, setImage] = useState(meditationIMG);
   const [showNumberValidation, setShowNumberValidation] = useState(false);
+  const [showCodeValidation, setCodeValidation] = useState(false);
+  const [buttonMessage, setButtonMessage] = useState("Enviar");
+  const navigate = useNavigate();
   
   const onSubmit = data => {
       if(data.cellphone) setCellphoneNumber(data.cellphone);
+      if(counter === 4 && data.code) navigate("/success");
       console.log(data);
   };
   useEffect(() => {
@@ -33,15 +38,21 @@ const Form = () => {
     switch (counter) {
         case 1:
             setImage(meditationIMG);
+            setButtonMessage("Enviar");
             break;
         case 2:
             setImage(heroAstronaut);
+            setButtonMessage("Continuar");
             break;
         case 3:
             setImage(heroAstronaut);
+            setButtonMessage("Validar código");
+            setShowNumberValidation(true);
             break;
         case 4:
             setImage(rugbyIMG);
+            setCodeValidation(true);
+            setButtonMessage("Enviar");
             break;
     
         default:
@@ -53,16 +64,24 @@ const Form = () => {
   useEffect(() => {
     if(showNumberValidation) {
         setTimeout(() => {
-            setShowNumberValidation(false)
+            setShowNumberValidation(false);
         }, 2000);
     };
-  }, [showNumberValidation])
+  }, [showNumberValidation]);
+
+  useEffect(() => {
+    if(showCodeValidation) {
+        setTimeout(() => {
+            setCodeValidation(false);
+        }, 2000)
+    }
+  }, [showCodeValidation]);
   
 
   return (
     <section className='Form'>
         {showNumberValidation && <NumberValidation />}
-        <CodeValidation />
+       {showCodeValidation && <CodeValidation />}
         <div className='counter-section'>
             <span className={classnames("number", {
                 active: progress === 25,
@@ -149,7 +168,7 @@ const Form = () => {
                         
                     </>
                 )}
-                <input type='submit' value="Enviar" aria-label='Enviar' className='btn-form' onClick={() => setProgress(prevState => prevState + 25)
+                <input type='submit' value={buttonMessage} aria-label='Enviar' className='btn-form' onClick={() => setProgress(prevState => prevState + 25)
                    }/>
             </form>
 
