@@ -16,7 +16,7 @@ const TeamWork = () => {
                 <p>Prueba práctica  <span className='orange'>&rarr;</span></p>
                 <p>Entrevista Técnica</p>
             </div>
-            <Link className='btn-primary' to="/" rel='noopener noreferrer'>¡Quiero ser parte!</Link> 
+            <Link className='btn-primary' to="/contact" rel='noopener noreferrer'>¡Quiero ser parte!</Link> 
         </div>
     </section>
   )

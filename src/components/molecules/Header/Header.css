@@ -1,3 +1,7 @@
+.Header {
+    padding-block-start: 20px;
+}
+
 .Header, img.header-image {
     margin-inline-start: 20px;
 }

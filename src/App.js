@@ -1,5 +1,6 @@
 import { Suspense, lazy } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Loading } from "./components/atoms";
 import './styles/index.css';
 
 const Home = lazy(() => import('./components/views/Home'));
@@ -8,7 +9,7 @@ const Success = lazy(() => import('./components/views/Success'));
 
 function App() {
   return (
-   <Suspense fallback="Loading">
+   <Suspense fallback={<Loading />}>
      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}/>

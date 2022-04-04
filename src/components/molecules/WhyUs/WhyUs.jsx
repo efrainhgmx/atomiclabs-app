@@ -64,7 +64,7 @@ const WhyUs = () => {
             </div>
 
             
-            <Link className='btn-primary' to="/" rel='noopener noreferrer'>¡Quiero ser parte!</Link> 
+            <Link className='btn-primary' to="/contact" rel='noopener noreferrer'>¡Quiero ser parte!</Link> 
         </div>
     </section>
   )

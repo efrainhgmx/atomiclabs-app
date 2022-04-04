@@ -18,7 +18,7 @@ const Hero = () => {
 
         <div className='hero-content__text'>
           <p>Desarrolla todo <span className='orange'>tu POTENCIAL</span> dentro del equipo de <span className='orange'>ATOMIC</span>LABS</p>
-          <Link className='btn-primary' to="/" rel='noopener noreferrer'>¡Quiero ser parte!</Link> 
+          <Link className='btn-primary' to="/contact" rel='noopener noreferrer'>¡Quiero ser parte!</Link> 
         </div>
       </div>
       <div className='more-info__container'>
