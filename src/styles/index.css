@@ -79,6 +79,10 @@ span.orange {
     max-width: 180px;
 }
 
+.btn-form:hover {
+    cursor: pointer;
+}
+
 .btn-form.disabled {
     opacity: 0.6;
 }

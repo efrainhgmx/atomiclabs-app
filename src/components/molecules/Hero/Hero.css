@@ -21,6 +21,9 @@
     width: 90%;
 }
 
+img.hero-image {
+    animation: bounce 6s infinite;
+}
 .hero-content__text {
     max-width: 550px;
     display: flex;
@@ -57,6 +60,7 @@
     display: inline-block;
     width: 30px;
     height: 30px;
+    animation: bounce 2s infinite;
 }
 
 .arrow-button:hover {
@@ -78,4 +82,16 @@
         width: 50px;
         height: 50px;
     }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+       transform: translateY(0);
+      }
+        40% {
+         transform: translateY(-30px);
+      }
+        60% {
+         transform: translateY(-15px);
+      }
 }
