@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkatomiclabs_app=self.webpackChunkatomiclabs_app||[]).push([[607],{751:function(s,a,c){c.r(a);c(791);var e=c(635),n=c(77),t=c(184);a.default=function(){return(0,t.jsxs)(t.Fragment,{children:[(0,t.jsxs)("main",{className:"Success",children:[(0,t.jsx)(e.h4,{}),(0,t.jsx)(n.p,{})]}),(0,t.jsx)(e.$_,{})]})}}}]);
+//# sourceMappingURL=607.3a15880a.chunk.js.map
